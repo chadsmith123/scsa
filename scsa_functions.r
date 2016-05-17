@@ -9,20 +9,27 @@ alphat <- function(red,green){
 seq1024 <- seq(1,1024,1)
 alphat.1024 <- NULL
 
-# Make a vector of all combinations of red and green values
-red <-NULL
-for(i in 1:1024){red <- append(red,rep(i,1024))}
-color <- data.frame(red,green=seq1024)
-color$alphat <- alphat(color$red,color$green)
-color$total <- 0.5*(color$red + color$green)
 
-scsa.dat <- function(x){
+scsa.dat <- function(x,skip.row,max.hgreen){
 # Merge imported data from FACS with SCSA parameters
+ x <- read.table(x,header=F,skip=skip.row)
  x1 <- as.matrix(x)
+ rows <- length(x1[1,])
+ cols <- length(x1[,1])
+ if(rows != cols){print(paste(rows,"and",cols,"columns. These values need to be equal."))}
  freq <- as.numeric(paste(x1))
+
+# Make a vector of all combinations of red and green values and calculate alphat for each
+ red < rep(1:cols,each=cols)
+ color <- data.frame(red,green=seq(1,cols,1))
+ color$alphat <- alphat(color$red,color$green)
+ color$total <- 0.5*(color$red + color$green)
+
+# Merge flow data and color values
  dat.tmp <- cbind(color,freq)
- dat.tmp <- subset(dat.tmp,freq != 0)
- dat <- subset(dat.tmp,green < 1023)  
+ dat <- subset(dat.tmp,freq != 0) # remove all cells in matrix with zero
+ if(missing(max.hgreen)){max.hgreen=cols}
+ dat <- subset(dat,green < max.hgreen)
  return(dat)
         }
 
