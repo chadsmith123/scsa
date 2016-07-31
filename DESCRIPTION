@@ -1,0 +1,15 @@
+Package: scsa
+Version: 1.0
+Date: 2016-02-20
+Title: Analysis of Sperm Chromatin Structure Assay (SCSA) Flow Cytometry Data
+Description: Calculates SCSA statistics from raw flow cytometry data. The package allows users to graphically interact with their data to select the thresholds for Alphat and HDS and returns an object with the relevant statistics for assessing DNA damage in a sample. A detailed plot is also provided to visualize the output.
+Authors@R: person("Chad","Smith",email="chad.smith123@gmail.com",role=c("aut","cre","cph"))
+Maintainer: Chad C Smith <chad.smith123@gmail.com>
+URL: http://chadcsmith.wordpress.com
+BugReports: https://github.com/chadsmith123/scsa
+LazyData: true
+License: GPL-3
+Imports: grDevices, graphics, stats, gplots, utils
+Encoding: UTF-8
+RoxygenNote: 6.0.1
+

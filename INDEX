@@ -1,0 +1,7 @@
+findAlphat	Plots a histogram of FACs data and allows user to select the Alphat threshold
+findHDS		Plots a histogram of FACs data and allows user to select the HDS threshold
+scsaDat		Import FACs data for a sample
+scsaPlot	Generates a plot of FACs data from scsaDat output
+scsa		Wrapper for producing scsa objects
+scsaStats	Calculates Sperm Chromatin Structure Analysis statistics from scsaDat output
+zf_facs		Sample raw FACs data set from a SCSA assay
