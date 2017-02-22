@@ -20,6 +20,11 @@ Consult your flow cytometer software manual for how to export the raw data.
 To analyze your flow cytometry data:
 
 1) Import the raw data from a sample using read.csv()
+
 2) run scsa() on the imported data.
+
+The program will run you through a series of histograms to select the values for Alphat and HDS. Calling plot() generates a figure:
+
+![SCSA_plot](https://github.com/chadsmith123/scsa/extdata/sample_plot.png)
 
 Thats it! The program will guide you through the analysis steps and return an scsa object with the statistics.
