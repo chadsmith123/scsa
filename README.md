@@ -25,6 +25,6 @@ To analyze your flow cytometry data:
 
 The program will run you through a series of histograms to select the values for Alphat and HDS. Calling plot() generates a figure:
 
-![SCSA_plot](https://github.com/chadsmith123/scsa/extdata/sample_plot.png)
+![SCSA_plot](https://github.com/chadsmith123/scsa/blob/master/exdata/sample_plot.png)
 
 Thats it! The program will guide you through the analysis steps and return an scsa object with the statistics.

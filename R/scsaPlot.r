@@ -21,7 +21,9 @@ scsaPlot <- function(x,title=x$id, ...){
   thresh.alphat <- x$stats$thresh.alphat
   thresh.HDS <- x$stats$thresh.HDS
 
-  par(mar=c(4.5,4,1.5,2),oma=c(0,0,3,0),cex=0.5)
+  par(mar=c(4.5,4.5,1.5,2),oma=c(0,0,3,0))
+  #par(mar=c(4.5,4,1.5,2),oma=c(0,0,3,0))
+  par(cex.axis=1.5,cex.lab=1.5)
   layout(matrix(c(1,2,1,3,1,4), 3, 2, byrow = TRUE),widths=c(3,3,1))
   palette(gplots::rich.colors(n=25))
 

@@ -9,7 +9,7 @@ scsa(x, ...)
 \arguments{
 \item{x}{square matrix of raw FACs data from a sample}
 
-\item{...}{additional arguments to be passed. See scsaStats and scsaDat for additional options.}
+\item{...}{additional arguments to be passed.}
 }
 \value{
 Returns a scsa object
